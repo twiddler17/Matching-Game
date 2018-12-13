@@ -114,4 +114,6 @@ while board.checkCards():
 #           and display are kind of vague and the user is never allowed to 
 #           exit the program. This would be great if fixed.
 #
+#	Classes look good, for the most part!
+#
 ########################################################################
