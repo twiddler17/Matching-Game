@@ -1,7 +1,10 @@
 import random
 from card import Card
 from board import Board
+<<<<<<< HEAD
 from gui import MyGame
+=======
+>>>>>>> 41ff3babf9c4294a23f679bd75282d1291276135
 import time
 
 BOARD_ONE = 4
@@ -13,12 +16,25 @@ BOARD_THREE = 8
 choice = -1
 
 while choice < 1 or choice > 3:
+<<<<<<< HEAD
+=======
+
+    ######################################################
+    #
+    # Need to check for invalid input here... If user enters
+    # string, an exception is raised --> error check
+    # Also, the prompt is kind of confusing. You tell the user
+    # to enter option, but in what form? Int or Str? The reason
+    # this is confusing is because you present it in string form
+    #
+    ######################################################
+
+>>>>>>> 41ff3babf9c4294a23f679bd75282d1291276135
     print("!!!Match the letters!!!")
     print("Option 1: 4x4")
     print("Option 2: 6x6")
     print("Option 3: 8x8")
     choice = int(input("Enter Option: "))
-    window = 
     if choice == 1:
         board = Board(BOARD_ONE)
     elif choice == 2:

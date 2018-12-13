@@ -3,6 +3,18 @@ import random
 
 class Board:
     
+<<<<<<< HEAD
+=======
+    #########################################################
+    #
+    # I think 'self._side' could be a little clearer. Without 
+    # investigating, it is not clear what that variable represents
+    # Just as well, there is no documentation stating what it is.
+    # If you are not going to document it, you better make sure 
+    # the purpose is explicit.
+    #
+    #########################################################
+>>>>>>> 41ff3babf9c4294a23f679bd75282d1291276135
     def __init__(self, side):
         """Constructor"""
         self._side = side
@@ -51,4 +63,29 @@ class Board:
         temp_letters = self._letters
         while len(temp_letters) > 0:
             for row in range(self._side):
-                for column in range(self._side):1
+                for column in range(self._side):
+                    number = random.choice(list(temp_letters.keys()))
+                    card = Card(number)
+                    self._board[row][column] = card
+                    if temp_letters[number] == 2:
+                        temp_letters[number] -= 1
+                    else:
+                        temp_letters.pop(number)
+    
+    def checkCards(self):
+        all_closed = True
+        for row in range(self._side):
+            if all_closed:
+                break
+            for column in range(self._side):
+                if all_closed:
+                    break
+                all_closed = self._board[row][column].isClosed()
+        return all_closed
+
+    def changeCardState(self, choice):
+        row, column = choice
+        if self._board[row][column].isClosed():
+            self._board[row][column].openCard()
+        else:
+            self._board[row][column].closeCard()
