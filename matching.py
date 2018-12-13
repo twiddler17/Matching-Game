@@ -1,6 +1,7 @@
 import random
 from card import Card
 from board import Board
+from gui import MyGame
 import time
 
 BOARD_ONE = 4
@@ -17,6 +18,7 @@ while choice < 1 or choice > 3:
     print("Option 2: 6x6")
     print("Option 3: 8x8")
     choice = int(input("Enter Option: "))
+    window = 
     if choice == 1:
         board = Board(BOARD_ONE)
     elif choice == 2:

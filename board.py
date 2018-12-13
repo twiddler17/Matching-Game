@@ -42,7 +42,7 @@ class Board:
     def generateLetters(self):
         number_letters = self._side * self._side
         self._letters = {}
-        while len(self._letters) < number_letters:
+        while len(self._letters) < number_letters / 2:
             letter = random.randrange(65, 91)
             if letter not in self._letters:
                 self._letters[letter] = 2
@@ -51,31 +51,4 @@ class Board:
         temp_letters = self._letters
         while len(temp_letters) > 0:
             for row in range(self._side):
-                for column in range(self._side):
-                    number = random.choice(list(temp_letters.keys()))
-                    card = Card(number)
-                    self._board[row][column] = card
-                    if temp_letters[number] == 2:
-                        temp_letters[number] -= 1
-                    else:
-                        temp_letters.pop(number)
-    
-    def checkCards(self):
-        all_closed = True
-        for row in range(self._side):
-            if all_closed:
-                break
-            for column in range(self._side):
-                if all_closed:
-                    break
-                all_closed = self._board[row][column].isClosed()
-        return all_closed
-
-    def changeCardState(self, choice):
-        row, column = choice
-        if self._board[row][column].isClosed():
-            self._board[row][column].openCard()
-        else:
-            self._board[row][column].closeCard()
-
-        
+                for column in range(self._side):1
