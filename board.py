@@ -2,19 +2,6 @@ from card import Card
 import random
 
 class Board:
-    
-<<<<<<< HEAD
-=======
-    #########################################################
-    #
-    # I think 'self._side' could be a little clearer. Without 
-    # investigating, it is not clear what that variable represents
-    # Just as well, there is no documentation stating what it is.
-    # If you are not going to document it, you better make sure 
-    # the purpose is explicit.
-    #
-    #########################################################
->>>>>>> 41ff3babf9c4294a23f679bd75282d1291276135
     def __init__(self, side):
         """Constructor"""
         self._side = side
@@ -24,13 +11,7 @@ class Board:
     @property
     def board(self):
         """Getter"""
-        return self._board
-
-    # def addItem(self, side, card):
-    #     """Assigns a Card object to an element in the two dimensional list"""
-    #     if side >= 0 and side < self._side:
-    #         if side >= 0 and side < self._side:
-    #             self._board[row][column] = card                
+        return self._board             
 
     def printBoard(self):
         print("---------------------------")
